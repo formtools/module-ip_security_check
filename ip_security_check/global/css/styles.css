@@ -1,0 +1,39 @@
+.your_ip {
+	float: right;
+  background-color: green;
+  color: white;
+  padding: 0px 8px;
+  height: 17px;
+  line-height: 16px;
+  border-radius: 3px;
+}
+.your_ip .label {
+  color: #cccccc;
+  line-height: 16px;
+}
+.field_label {
+  width: 120px;
+  float: left;
+  color: #666666;
+}
+
+.ip_list {
+	width: 560px;
+}
+.ip_list .col2 {
+	width: 300px;
+}
+.ip_list .col2 input {
+  width: 296px;
+}
+.ip_list .col3 {
+  width: 186px;
+}
+.ip_list .col3 input {
+  width: 182px;
+}
+
+#denied_page_content {
+  width: 100%;
+  height: 350px;
+}
