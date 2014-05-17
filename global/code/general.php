@@ -22,24 +22,10 @@ function ipsc_check_user($vars)
     $permitted = true;
     foreach ($ip_list_hash as $ip_info)
     {
-      if (strpos($ip_info["ip"], "*") !== false)
+      if ($ip_info["ip"])
       {
-        // convert the *'s in the IP address into a regexp
-        $match = preg_replace("/\*/", "\d{1,3}", $ip_info["ip"]);
-        $reg_exp = "/$match/";
-        if (preg_match($reg_exp, $current_ip))
-        {
-          $permitted = false;
-          break;
-        }
-      }
-      else
-      {
-        if ($ip_info["ip"])
-        {
-          $permitted = false;
-          break;
-        }
+        $permitted = false;
+        break;
       }
     }
   }
@@ -48,26 +34,10 @@ function ipsc_check_user($vars)
     $permitted = false;
     foreach ($ip_list_hash as $ip_info)
     {
-      if (strpos($ip_info["ip"], "*") !== false)
+      if ($ip_info["ip"])
       {
-        // convert the *'s in the IP address into a regexp
-        $match = preg_replace("/\*/", "\d{1,3}", $ip_info["ip"]);
-        $reg_exp = "/$match/";
-        if (preg_match($reg_exp, $current_ip))
-        {
-          $permitted = true;
-          break;
-        }
-      }
-
-      // otherwise, do a direct comparison
-      else
-      {
-        if ($current_ip == $ip_info["ip"])
-        {
-          $permitted = true;
-          break;
-        }
+        $permitted = true;
+        break;
       }
     }
   }
