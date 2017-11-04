@@ -2,10 +2,15 @@
 
 require_once("../../global/library.php");
 
-$settings = ft_get_module_settings();
+use FormTools\Modules;
+
+$module = Modules::initModulePage("admin");
+
+$settings = $module->getSettings();
 $denied_page_content = $settings["denied_page_content"];
 
-$page_vars = array();
-$page_vars["denied_page_content"] = $denied_page_content;
+$page_vars = array(
+    "denied_page_content" => $denied_page_content
+);
 
-ft_display_module_page("templates/forbidden.tpl", $page_vars);
+$module->displayPage("templates/forbidden.tpl", $page_vars);

@@ -24,8 +24,8 @@ $L["notify_denied_page_updated"] = "The content of the Denied page has been upda
 $L["notify_settings_updated"] = "Your settings have been updated.";
 
 $L["text_module_intro"] = "This module adds an additional security layer to Form Tools user accounts, letting you maintain a whitelist or blacklist of IP addresses. You can target the list of IPs through one of two methods:";
-$L["text_ip_change_warning"] = "<b>Warning</b>: IP addresses can change! If you find yourself locked out by this module, visit the module documentation at <a href=\"http://modules.formtools.org/ip_security_check/\">http://modules.formtools.org/ip_security_check/</a> to find out how to get back in.";
-$L["text_help"] = "For further help on how to use this module, please see the <a href=\"http://modules.formtools.org/ip_security_check/\">module help documentation</a>.";
+$L["text_ip_change_warning"] = "<b>Warning</b>: IP addresses can change! If you find yourself locked out by this module, visit the module documentation at <a href=\"https://docs.formtools.org/modules/ip_security_check/\">https://docs.formtools.org/modules/ip_security_check/</a> to find out how to get back in.";
+$L["text_help"] = "For further help on how to use this module, please see the <a href=\"https://docs.formtools.org/modules/ip_security_check/\">module help documentation</a>.";
 
 $L["validation_no_list_type"] = "Please select the list type.";
 $L["validation_invalid_chars"] = "Sorry, the following characters are not permitted in any fields: ` and |.";

@@ -6,7 +6,7 @@
 
   <table cellpadding="0" cellspacing="0">
   <tr>
-    <td width="45"><a href="index.php"><img src="global/images/icon_ip_security_check.png" border="0" width="34" height="34" /></a></td>
+    <td width="45"><a href="index.php"><img src="images/icon_ip_security_check.png" border="0" width="34" height="34" /></a></td>
     <td class="title">
       <a href="../../admin/modules">{$LANG.word_modules}</a>
       <span class="joiner">&raquo;</span>
