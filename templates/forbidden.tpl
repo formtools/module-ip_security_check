@@ -1,5 +1,5 @@
-{include file='header.tpl'}
+{ft_include file='header.tpl'}
 
   {$denied_page_content}
 
-{include file='footer.tpl'}
+{ft_include file='footer.tpl'}

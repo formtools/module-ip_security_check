@@ -1,4 +1,4 @@
-{include file='modules_header.tpl'}
+{ft_include file='modules_header.tpl'}
 
   <div class="your_ip">
     <span class="label">Your IP:</span> <b>{$ip}</b>
@@ -15,7 +15,7 @@
   </tr>
   </table>
 
-  {include file="messages.tpl"}
+  {ft_include file="messages.tpl"}
 
   <div>
     {$L.text_module_intro}
@@ -84,4 +84,4 @@
 	  </p>
 	</form>
 
-{include file='modules_footer.tpl'}
+{ft_include file='modules_footer.tpl'}
