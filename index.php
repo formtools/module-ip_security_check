@@ -57,7 +57,7 @@ $(function() {
   if ($(".sortable_row").length == 0) {
     ip_ns.add_row();
   }
-  $("#add_row_link").bind("click", function() {
+  $("#add_row_link").bind("click", function() { 
     return ip_ns.add_row();
   });
 
