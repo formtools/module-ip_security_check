@@ -14,8 +14,8 @@ class Module extends FormToolsModule
     protected $author = "Ben Keen";
     protected $authorEmail = "ben.keen@gmail.com";
     protected $authorLink = "https://formtools.org";
-    protected $version = "2.0.2";
-    protected $date = "2017-11-11";
+    protected $version = "2.0.3";
+    protected $date = "2019-01-28";
     protected $originLanguage = "en_us";
     protected $jsFiles = array(
         "scripts/security_check.js",
@@ -50,9 +50,16 @@ class Module extends FormToolsModule
             "denied_page_content" => "<div class=\"title\">Access Denied</div>\n<p>\n  Sorry, you are not permitted access to the admin area.\n</p>"
         ));
 
-        Hooks::registerHook("code", "ip_security_check", "main", "FormTools\\User->login", "checkUser", 50, true);
+        $this->resetHooks();
 
         return array(true, $L["notify_module_installed"]);
+    }
+
+
+    public function upgrade($module_id, $old_module_version)
+    {
+        $this->clearHooks();
+        Hooks::registerHook("code", "ip_security_check", "main", "FormTools\\User->login", "checkUser", 50, true);
     }
 
 
