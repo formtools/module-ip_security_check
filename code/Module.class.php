@@ -14,8 +14,8 @@ class Module extends FormToolsModule
     protected $author = "Ben Keen";
     protected $authorEmail = "ben.keen@gmail.com";
     protected $authorLink = "https://formtools.org";
-    protected $version = "2.0.3";
-    protected $date = "2019-01-28";
+    protected $version = "2.0.4";
+    protected $date = "2019-01-30";
     protected $originLanguage = "en_us";
     protected $jsFiles = array(
         "scripts/security_check.js",
@@ -57,6 +57,12 @@ class Module extends FormToolsModule
 
 
     public function upgrade($module_id, $old_module_version)
+    {
+        $this->resetHooks();
+    }
+
+
+    public function resetHooks()
     {
         $this->clearHooks();
         Hooks::registerHook("code", "ip_security_check", "main", "FormTools\\User->login", "checkUser", 50, true);
